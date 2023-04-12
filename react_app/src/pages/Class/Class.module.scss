@@ -1,0 +1,53 @@
+.container {
+    width: 100%;
+    height: 100%;
+
+    .titleContainer{
+        width: 100%;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+
+        .title {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: auto;
+        }
+
+        .buttonGroup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            .addButton, .homeButton {
+                border-radius: 6px;
+                margin-right: 15px;
+                border: none;
+                height: 35px;
+                background-color: rgb(220, 220, 220);
+    
+                &:hover {
+                    background-color: rgb(240, 234, 234);
+                    color: rgb(35, 34, 34);
+                }
+    
+                &:active {
+                    background-color: rgb(154, 152, 152);
+                    color: rgb(56, 55, 55);
+                }
+                
+            }
+        }
+    }
+
+    .classList {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+}

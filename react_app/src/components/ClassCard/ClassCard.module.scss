@@ -1,0 +1,57 @@
+.classCard {
+    width: 212px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    .classImage {
+        width: 100%;
+        height: 149px;
+        cursor: pointer
+    }
+
+    .classDetails {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid black;
+        background-color: rgb(220, 220, 220);
+        padding: 9px;
+        box-sizing: border-box;
+
+        .title {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .icon {
+            display: flex;
+            
+            .studentNumber {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .buttonIconContainer {
+        display: flex;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            height: 20px;
+        }
+
+        .iconButton {
+            display: flex;
+            cursor: pointer
+        }
+    }
+
+    a {
+        text-decoration: none;
+        height: 149px;
+    }
+}
+
