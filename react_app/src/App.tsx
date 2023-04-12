@@ -7,6 +7,7 @@ import CreateStudentPage from './pages/CreateStudent/CreateStudent';
 import StudentPage from './pages/Student/Student';
 import UpdateStudentPage from './pages/UpdateStudent/UpdateStudent';
 import UpdateClassPage from './pages/UpdateClass/UpdateClass';
+import StudentsPage from './pages/Students/Students';
 
 function App() {
   const {id} = useParams();
@@ -15,6 +16,7 @@ function App() {
     <div className="App" style={{width: '100%', height: '100%'}}>
           <Routes>
             <Route path="/" element={<Navigate to="/classes" replace/>}/>
+            <Route path="/students" element={<StudentsPage />} />
             <Route path="/classes" element={<ClassesPage />} />
             <Route path="/classes/create-class" element={<CreateClassPage />} />
             <Route path="/classes/:id" element={<ClassPage />} />

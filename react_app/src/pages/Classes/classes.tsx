@@ -31,6 +31,8 @@ export default function ClassesPage() {
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Classes</h1>
                 <Link to="/classes/create-class"><button className={styles.addButton}>Add Class</button></Link>
+                <Link to="/students"><button className={styles.addButton}>Students</button></Link>
+
             </div>
             <div className={styles.classesContainer}>
                 {data && data.map((item: ClassProps) => {

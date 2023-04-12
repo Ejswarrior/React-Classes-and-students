@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 studentRouter.get('/', async (req: Request, res: Response, next: NextFunction) => {
     try {
         const getStudents = await prisma.student.findMany();
-        console.log(getStudents)
+        res.json(getStudents)
     }
     catch(error) {
         return next(error)
