@@ -4,17 +4,14 @@ import { useReducer } from 'react';
 import { useParams } from 'react-router';
 import { useNavigate } from 'react-router-dom'
 
-
 interface State {
     name: string,
     email: string
 }
 
-
 const reducer = (state: State, action: {type: string, evtTarget: string}): State => {
     const { type, evtTarget } = action;
-    const {name, email} = state
-    
+
     switch (type) {
         case 'updateName': 
             return {

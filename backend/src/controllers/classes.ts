@@ -79,9 +79,9 @@ classRouter.put('/:id/add-student', async (req: Request, res: Response, next) =>
                     create: {
                         name: name,
                         email: email,
+                    }
                 }
             }
-        }
         })
         res.redirect('/classes');
     }
@@ -122,11 +122,6 @@ classRouter.put('/student/:id', async (req: Request, res: Response, next) => {
             data: {
                     name: name,
                     email: email,
-                    classList: {
-                        connect: {
-                            id: id
-                        }
-                    }
                 }
         })
         res.json(classes)

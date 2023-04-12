@@ -1,6 +1,6 @@
 import styles from'./StudentList.module.scss';
 import { FcConferenceCall, FcEditImage, FcEmptyTrash } from 'react-icons/fc';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export interface StudentListItemProps {
     /**
@@ -22,8 +22,10 @@ export interface StudentListItemProps {
 }
 export default function StudentListItem(props: StudentListItemProps) {
     const {id, name, email} = props
+    const navigate = useNavigate();
 
-    const onClickDelete = async () => {
+    const onClickDelete = async (evt: React.MouseEvent<HTMLButtonElement>) => {
+        evt.preventDefault()
         try {
             await fetch(`http://localhost:8008/classes/student/delete`, {
                 method: 'DELETE',
@@ -39,6 +41,7 @@ export default function StudentListItem(props: StudentListItemProps) {
         catch(error) {
             console.error(error)
         }
+        navigate(0, {replace: true})
     }
 
     return (
